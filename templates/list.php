@@ -12,7 +12,7 @@
         <ul>
             <?php foreach ($posts as $articles): ?>
             <li>
-                <a href="./show.php?id=<?=$articles['id']?>">
+                <a href="show.php?id=<?=$articles['id']?>">
                     <?= $articles['title']?>
                 </a>
 

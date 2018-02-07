@@ -1,13 +1,7 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>presentation du code</title>
-</head>
-<body>
+<!--list.php avec utilisation layout(voir fin de page)>
+<?php $title='liste des posts'?>
+
+<?php ob_start()?>
         <h1>liste des posts</h1>
         <ul>
             <?php foreach ($posts as $articles): ?>
@@ -18,5 +12,5 @@
 
             <?php endforeach ?>
         </ul>
-</body>
-</html>
+<?php $content= ob_get_clean()?>
+<?php include 'layout.php'?>

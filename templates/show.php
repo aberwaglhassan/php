@@ -1,20 +1,11 @@
+<?php $title=$row['title']?>
 
-<!DOCTYPE html>
-    <html>
-    <head>
-        <title>
-details articles
-        </title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-    <h1>Liste des articles</h1>
+<?php ob_start()?>
+    <h1><?=$row['title']?></h1>
 
-
-
-                 <?= $row['description'] ?>
-
-
-
-</body>
-</html>
+    <div class="date"><?=$row['cree_le']?></div>
+    <div class="body">
+        <?=$row['description']?>
+    </div>
+<?php $content=ob_get_clean()?>
+<?php include 'layout.php'?>

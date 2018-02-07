@@ -24,7 +24,7 @@ function get_all_articles()
 }
 function get_description(){
     $link=open_database_connection();
-    $query = 'SELECT title, description FROM articles WHERE  id=:id';
+    $query = 'SELECT title, description,cree_le FROM articles WHERE  id=:id';
     $statement=$link->prepare($query);
     $statement->bindValue(':id',$_GET['id'],PDO::PARAM_INT);
     $statement->execute();
